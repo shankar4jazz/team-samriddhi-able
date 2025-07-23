@@ -59,8 +59,16 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="flex items-center space-x-4"
+              className="flex items-center space-x-3"
             >
+              <Image
+                src="/images/logo/samriddhi-logo.png"
+                alt="Team Samriddhi"
+                width={40}
+                height={40}
+                className="h-10 w-auto"
+              />
+              <div className="h-8 w-px bg-gray-300" />
               <Image
                 src="/images/logo/jci-logo.png"
                 alt="JCI India"
@@ -123,8 +131,16 @@ export default function Home() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex justify-center mb-6"
+              className="flex justify-center items-center gap-8 mb-6"
             >
+              <Image
+                src="/images/logo/samriddhi-logo.png"
+                alt="Team Samriddhi"
+                width={100}
+                height={100}
+                className="h-20 w-auto"
+              />
+              <div className="h-16 w-px bg-gray-300" />
               <Image
                 src="/images/logo/jci-logo.png"
                 alt="JCI India"
