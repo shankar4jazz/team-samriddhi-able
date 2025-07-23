@@ -26,7 +26,8 @@ export default function Home() {
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#home" className="text-gray-600 hover:text-gray-900">Home</a>
-              <a href="#about" className="text-gray-600 hover:text-gray-900">About ABLE</a>
+              <a href="#samriddhi" className="text-gray-600 hover:text-gray-900">About Samriddhi</a>
+              <a href="#about" className="text-gray-600 hover:text-gray-900">ABLE Program</a>
               <a href="#team" className="text-gray-600 hover:text-gray-900">Our Team</a>
               <a href="#contact" className="text-gray-600 hover:text-gray-900">Contact</a>
             </nav>
@@ -73,8 +74,79 @@ export default function Home() {
         </div>
       </section>
 
+      {/* What is Samriddhi Section */}
+      <section id="samriddhi" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What is Samriddhi?
+            </h2>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xl text-gray-600 mb-8">
+                <span className="text-2xl font-bold text-blue-600">समृद्धि (Samriddhi)</span> is a Sanskrit word meaning 
+                <span className="font-semibold"> "Prosperity, Growth, and Abundance"</span>
+              </p>
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-8">
+                <p className="text-lg text-gray-700 mb-6">
+                  Team Samriddhi embodies this philosophy - we are 14 diverse professionals united by our commitment to 
+                  collective growth, mutual prosperity, and creating abundance not just for ourselves, but for our 
+                  communities and the businesses we serve.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                  <div className="bg-white rounded-lg p-4 shadow-sm">
+                    <h3 className="text-xl font-bold text-blue-600 mb-2">सम् (Sam)</h3>
+                    <p className="text-gray-700">Together, United</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 shadow-sm">
+                    <h3 className="text-xl font-bold text-blue-600 mb-2">ऋद्धि (Riddhi)</h3>
+                    <p className="text-gray-700">Growth, Success</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 shadow-sm">
+                    <h3 className="text-xl font-bold text-blue-600 mb-2">समृद्धि (Samriddhi)</h3>
+                    <p className="text-gray-700">Complete Prosperity</p>
+                  </div>
+                </div>
+              </div>
+              <div className="text-left max-w-3xl mx-auto">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Team Philosophy</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <Star className="h-6 w-6 text-yellow-500 mr-3 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-gray-900">Collective Excellence:</span>
+                      <span className="text-gray-700"> Each member brings unique expertise from different industries, creating a powerful synergy</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Zap className="h-6 w-6 text-orange-500 mr-3 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-gray-900">Mutual Growth:</span>
+                      <span className="text-gray-700"> We believe in lifting each other up, sharing knowledge, and growing together</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Users className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-gray-900">Community Impact:</span>
+                      <span className="text-gray-700"> Our prosperity extends beyond individual success to positive community transformation</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Award className="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-gray-900">ABLE Integration:</span>
+                      <span className="text-gray-700"> Through JCI's ABLE program, we're advancing business leadership excellence across India</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ABLE Program Values Section */}
-      <section id="services" className="py-20 bg-white">
+      <section id="values" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -298,7 +370,8 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="#about" className="text-gray-300 hover:text-white">About ABLE</a></li>
+                <li><a href="#samriddhi" className="text-gray-300 hover:text-white">About Samriddhi</a></li>
+                <li><a href="#about" className="text-gray-300 hover:text-white">ABLE Program</a></li>
                 <li><a href="#team" className="text-gray-300 hover:text-white">Our Team</a></li>
                 <li><a href="#contact" className="text-gray-300 hover:text-white">Connect</a></li>
               </ul>
