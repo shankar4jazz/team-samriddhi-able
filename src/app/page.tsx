@@ -385,7 +385,7 @@ export default function Home() {
       <section id="able-program" className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070"
+            src="/images/team-collaboration.jpg"
             alt="Business team collaboration"
             fill
             className="object-cover opacity-5"
