@@ -769,8 +769,26 @@ export default function Home() {
             className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300"
           >
             <p>&copy; 2024 Team Samriddhi - ABLE Program by JCI India. All rights reserved.</p>
-            <p className="text-xs mt-2 text-gray-500">
-              Made with ❤️ by Team Samriddhi
+            <p className="text-sm mt-3 text-gray-400">
+              Designed and Developed by{" "}
+              <a 
+                href="https://eagleminds.net" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
+              >
+                Eagleminds Technologies Private Limited
+              </a>
+            </p>
+            <p className="text-xs mt-1 text-gray-500">
+              <a 
+                href="https://eagleminds.net" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-gray-400 transition-colors"
+              >
+                www.eagleminds.net
+              </a>
             </p>
           </motion.div>
         </div>

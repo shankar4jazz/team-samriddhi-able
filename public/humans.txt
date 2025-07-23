@@ -1,0 +1,23 @@
+/* TEAM */
+Team: Team Samriddhi
+Program: ABLE Program by JCI India
+Members: 14 Professionals from diverse industries
+Coach: Harish Kumar C
+Team Leader: Vikas BC
+
+/* DEVELOPER */
+Company: Eagleminds Technologies Private Limited
+Website: https://eagleminds.net
+Location: Tirupattur, Tamil Nadu, India
+Team Member: Gowri Shankar V - Software Developer
+
+/* THANKS */
+JCI India for the ABLE Program
+All Team Samriddhi members for their participation
+
+/* SITE */
+Last update: 2024
+Language: English
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: Next.js 15, React 19, TypeScript, Tailwind CSS, Framer Motion
+Tools: VS Code, Git, Vercel
