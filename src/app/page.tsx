@@ -145,9 +145,10 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-5xl md:text-7xl font-bold mb-6"
+              className="text-5xl md:text-7xl font-bold mb-6 text-gray-900"
             >
-              Team <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Samriddhi</span>
+              <span className="bg-gradient-to-r from-gray-800 to-gray-900 bg-clip-text text-transparent">Team</span>{" "}
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Samriddhi</span>
             </motion.h1>
 
             <motion.div
