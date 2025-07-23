@@ -155,13 +155,18 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex items-center justify-center gap-2 mb-4"
+              className="mb-4"
             >
-              <Sparkles className="h-5 w-5 text-yellow-500" />
-              <p className="text-xl md:text-2xl text-gray-700">
-                Proud participants of the <strong className="text-blue-600">ABLE Program</strong> by JCI India
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Sparkles className="h-5 w-5 text-yellow-500" />
+                <p className="text-xl md:text-2xl text-gray-700">
+                  Proud participants of the <strong className="text-blue-600">ABLE Program</strong> by JCI India
+                </p>
+                <Sparkles className="h-5 w-5 text-yellow-500" />
+              </div>
+              <p className="text-lg text-gray-600">
+                <strong className="text-purple-600">A</strong>cademy for <strong className="text-purple-600">B</strong>usiness <strong className="text-purple-600">L</strong>eadership <strong className="text-purple-600">E</strong>xcellence for Professionals
               </p>
-              <Sparkles className="h-5 w-5 text-yellow-500" />
             </motion.div>
 
             <motion.p
@@ -404,10 +409,17 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                 About ABLE Program
               </h2>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                Academy for Business Leadership Excellence
+              </h3>
               <p className="text-lg text-gray-600 mb-6">
-                ABLE is a prestigious leadership development program conducted by JCI India, 
-                designed to nurture business leaders and entrepreneurs. Team Samriddhi represents 
-                14 exceptional professionals from diverse industries across India.
+                JCI ABLE is a comprehensive training program offered by Junior Chamber International (JCI) India, 
+                specifically designed for young professionals and entrepreneurs. This prestigious initiative aims to 
+                enhance leadership skills, business acumen, and overall professional development.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                Team Samriddhi represents 14 exceptional professionals from diverse industries across India, 
+                united in their journey to become transformative leaders in their respective fields.
               </p>
               <motion.ul
                 variants={staggerContainer}
@@ -417,10 +429,10 @@ export default function Home() {
                 className="space-y-4"
               >
                 {[
-                  "14 Diverse Professionals",
-                  "Multiple Industries & Locations",
-                  "Leadership Development Focus",
-                  "Community Impact Initiatives"
+                  "Business Strategy & Leadership Development",
+                  "Communication Skills & Personal Branding",
+                  "Networking & Professional Growth",
+                  "Community Impact & Social Responsibility"
                 ].map((item, index) => (
                   <motion.li
                     key={index}
@@ -453,19 +465,33 @@ export default function Home() {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl blur-lg opacity-20" />
               <div className="relative bg-white p-8 rounded-2xl shadow-2xl">
                 <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-3 py-1 rounded-full">
-                  OUR MISSION
+                  PROGRAM BENEFITS
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Excellence Through Unity</h3>
-                <p className="text-gray-600 mb-6">
-                  To excel in our respective fields while contributing positively to society, 
-                  fostering innovation, and building meaningful professional relationships.
-                </p>
-                <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Why ABLE?</h3>
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <p className="text-gray-600 text-sm">Enhanced leadership capabilities and business strategy skills</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <p className="text-gray-600 text-sm">Strong professional network across industries</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <p className="text-gray-600 text-sm">Improved communication and personal branding</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <p className="text-gray-600 text-sm">Greater confidence in navigating the business world</p>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-xl">
                   <div className="flex items-center justify-between mb-2">
-                    <p className="text-sm text-blue-800 font-semibold">JCI India ABLE Program</p>
+                    <p className="text-sm text-blue-800 font-semibold">JCI India ABLE (P)</p>
                     <Target className="h-5 w-5 text-purple-600" />
                   </div>
-                  <p className="text-sm text-gray-600">Advancing Business Leadership Excellence</p>
+                  <p className="text-xs text-gray-600">Academy for Business Leadership Excellence for Professionals</p>
                 </div>
               </div>
             </motion.div>

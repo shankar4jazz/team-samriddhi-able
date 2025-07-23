@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Team Samriddhi - ABLE Program by JCI India",
-  description: "Meet Team Samriddhi, 14 exceptional professionals from diverse industries united by the ABLE Program - JCI India's premier leadership development initiative. Designed and Developed by Eagleminds Technologies Private Limited.",
+  description: "Meet Team Samriddhi, 14 exceptional professionals from diverse industries united by the ABLE (Academy for Business Leadership Excellence) Program - JCI India's premier leadership development initiative for professionals. Designed and Developed by Eagleminds Technologies Private Limited.",
   keywords: "ABLE program, JCI India, Team Samriddhi, leadership development, business leaders, entrepreneurs, professional development",
   authors: [{ name: "Team Samriddhi" }, { name: "Eagleminds Technologies Private Limited", url: "https://eagleminds.net" }],
   creator: "Eagleminds Technologies Private Limited",
