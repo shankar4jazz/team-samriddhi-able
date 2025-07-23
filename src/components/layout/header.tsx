@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -19,10 +20,20 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-gray-900">
-              Samriddhi
-            </Link>
+          <div className="flex items-center space-x-4">
+            <Image
+              src="/images/logo/jci-logo.png"
+              alt="JCI India"
+              width={40}
+              height={40}
+              className="h-10 w-auto"
+            />
+            <div className="flex flex-col">
+              <Link href="/" className="text-xl font-bold text-gray-900 leading-tight">
+                Team Samriddhi
+              </Link>
+              <span className="text-xs text-blue-600 font-medium">ABLE Program - JCI India</span>
+            </div>
           </div>
 
           {/* Desktop Navigation */}

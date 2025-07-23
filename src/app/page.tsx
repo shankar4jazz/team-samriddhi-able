@@ -1,6 +1,7 @@
 "use client"
 
 import { ArrowRight, CheckCircle, Star, Users, Zap, MapPin, Briefcase, Award, Crown, Phone } from "lucide-react"
+import Image from "next/image"
 import { teamMembers } from "@/data/team-members"
 
 export default function Home() {
@@ -10,7 +11,19 @@ export default function Home() {
       <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-2xl font-bold text-gray-900">Team Samriddhi</div>
+            <div className="flex items-center space-x-4">
+              <Image
+                src="/images/logo/jci-logo.png"
+                alt="JCI India"
+                width={40}
+                height={40}
+                className="h-10 w-auto"
+              />
+              <div className="flex flex-col">
+                <div className="text-xl font-bold text-gray-900 leading-tight">Team Samriddhi</div>
+                <span className="text-xs text-blue-600 font-medium">ABLE Program - JCI India</span>
+              </div>
+            </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#home" className="text-gray-600 hover:text-gray-900">Home</a>
               <a href="#about" className="text-gray-600 hover:text-gray-900">About ABLE</a>
@@ -28,6 +41,15 @@ export default function Home() {
       <section id="home" className="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <Image
+                src="/images/logo/jci-logo.png"
+                alt="JCI India"
+                width={120}
+                height={120}
+                className="h-20 w-auto"
+              />
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Team <span className="text-blue-600">Samriddhi</span>
             </h1>
@@ -164,16 +186,42 @@ export default function Home() {
                 )}
                 
                 <div className="text-center mb-4">
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 ${
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 overflow-hidden ${
                     member.role === 'coach' 
-                      ? 'bg-gradient-to-r from-yellow-500 to-orange-500' 
+                      ? 'ring-4 ring-yellow-400' 
                       : member.role === 'team-leader' 
-                      ? 'bg-gradient-to-r from-blue-500 to-indigo-500'
-                      : 'bg-blue-600'
+                      ? 'ring-4 ring-blue-400'
+                      : 'ring-2 ring-gray-300'
                   }`}>
-                    <span className="text-white font-bold text-xl">
-                      {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                    </span>
+                    {member.photo ? (
+                      <Image
+                        src={member.photo}
+                        alt={member.name}
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover rounded-full"
+                        onError={(e) => {
+                          // Fallback to initials if image fails to load
+                          const target = e.target as HTMLElement;
+                          target.style.display = 'none';
+                          const fallback = target.nextElementSibling as HTMLElement;
+                          if (fallback) fallback.style.display = 'flex';
+                        }}
+                      />
+                    ) : null}
+                    <div className={`w-full h-full rounded-full flex items-center justify-center ${
+                      member.photo ? 'hidden' : 'flex'
+                    } ${
+                      member.role === 'coach' 
+                        ? 'bg-gradient-to-r from-yellow-500 to-orange-500' 
+                        : member.role === 'team-leader' 
+                        ? 'bg-gradient-to-r from-blue-500 to-indigo-500'
+                        : 'bg-blue-600'
+                    }`}>
+                      <span className="text-white font-bold text-xl">
+                        {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                      </span>
+                    </div>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
                   <p className="text-sm text-blue-600 mb-1">{member.title}</p>
