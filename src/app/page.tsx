@@ -125,20 +125,13 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex justify-center mb-6"
             >
-              <div className="relative">
-                <Image
-                  src="/images/logo/jci-logo.png"
-                  alt="JCI India"
-                  width={120}
-                  height={120}
-                  className="h-20 w-auto"
-                />
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute -inset-4 border-2 border-dashed border-blue-300 rounded-full"
-                />
-              </div>
+              <Image
+                src="/images/logo/jci-logo.png"
+                alt="JCI India"
+                width={120}
+                height={120}
+                className="h-20 w-auto"
+              />
             </motion.div>
 
             <motion.h1
