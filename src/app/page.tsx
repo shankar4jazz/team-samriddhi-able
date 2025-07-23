@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, CheckCircle, Star, Users, Zap, MapPin, Briefcase, Award } from "lucide-react"
+import { ArrowRight, CheckCircle, Star, Users, Zap, MapPin, Briefcase, Award, Crown, Phone } from "lucide-react"
 import { teamMembers } from "@/data/team-members"
 
 export default function Home() {
@@ -35,7 +35,8 @@ export default function Home() {
               Proud participants of the <strong>ABLE Program</strong> by JCI India
             </p>
             <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-              A dynamic team of 13 professionals from diverse industries, united in our mission to 
+              Led by Coach <strong>Harish Kumar C</strong> (LIC of India) and Team Leader <strong>Vikas BC</strong>, 
+              we are 14 professionals from diverse industries, united in our mission to 
               excel, grow, and make a meaningful impact in our communities and businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -136,14 +137,40 @@ export default function Home() {
               Meet Team Samriddhi
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              13 exceptional professionals from diverse industries, united by the ABLE program
+              Led by Coach Harish Kumar C and Team Leader Vikas BC - 14 professionals united by the ABLE program
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.slice(0, 6).map((member, index) => (
-              <div key={member.id} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {teamMembers.map((member, index) => (
+              <div key={member.id} className={`rounded-lg p-6 hover:shadow-lg transition-shadow relative ${
+                member.role === 'coach' 
+                  ? 'bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-300' 
+                  : member.role === 'team-leader' 
+                  ? 'bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-300'
+                  : 'bg-gray-50'
+              }`}>
+                {/* Role Badge */}
+                {member.role === 'coach' && (
+                  <div className="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                    <Crown className="h-3 w-3 mr-1" />
+                    COACH
+                  </div>
+                )}
+                {member.role === 'team-leader' && (
+                  <div className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                    <Users className="h-3 w-3 mr-1" />
+                    LEADER
+                  </div>
+                )}
+                
                 <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 ${
+                    member.role === 'coach' 
+                      ? 'bg-gradient-to-r from-yellow-500 to-orange-500' 
+                      : member.role === 'team-leader' 
+                      ? 'bg-gradient-to-r from-blue-500 to-indigo-500'
+                      : 'bg-blue-600'
+                  }`}>
                     <span className="text-white font-bold text-xl">
                       {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                     </span>
@@ -151,18 +178,25 @@ export default function Home() {
                   <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
                   <p className="text-sm text-blue-600 mb-1">{member.title}</p>
                   <p className="text-sm text-gray-600 mb-2">{member.company}</p>
-                  <div className="flex items-center justify-center text-sm text-gray-500">
+                  <div className="flex items-center justify-center text-sm text-gray-500 mb-2">
                     <MapPin className="h-4 w-4 mr-1" />
                     {member.location}
                   </div>
+                  {member.mobile && (
+                    <div className="flex items-center justify-center text-sm text-green-600">
+                      <Phone className="h-4 w-4 mr-1" />
+                      {member.mobile}
+                    </div>
+                  )}
                 </div>
+                
                 <div className="text-center">
                   {member.motto && (
                     <p className="text-sm italic text-gray-600 mb-3">
                       "{member.motto}"
                     </p>
                   )}
-                  <div className="flex flex-wrap justify-center gap-2">
+                  <div className="flex flex-wrap justify-center gap-1">
                     {member.specialization?.slice(0, 2).map((spec, idx) => (
                       <span key={idx} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
                         {spec}
@@ -172,11 +206,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="text-center mt-12">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              View All Team Members
-            </button>
           </div>
         </div>
       </section>
@@ -229,10 +258,11 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Team Stats</h4>
               <ul className="space-y-2 text-gray-300">
-                <li>13 Team Members</li>
+                <li>14 Team Members</li>
+                <li>1 Coach + 13 Members</li>
                 <li>Multiple Industries</li>
                 <li>Pan-India Presence</li>
-                <li>JCI India Program</li>
+                <li>JCI India ABLE Program</li>
               </ul>
             </div>
           </div>
