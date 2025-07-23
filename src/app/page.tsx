@@ -85,20 +85,20 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
+            <div className="text-center p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
               <Award className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Excellence</h3>
-              <p className="text-gray-600">Striving for the highest standards in everything we do, from business practices to personal growth</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Excellence</h3>
+              <p className="text-gray-700 font-medium">Striving for the highest standards in everything we do, from business practices to personal growth</p>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
+            <div className="text-center p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
               <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Leadership</h3>
-              <p className="text-gray-600">Developing leadership skills to inspire positive change in our communities and industries</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Leadership</h3>
+              <p className="text-gray-700 font-medium">Developing leadership skills to inspire positive change in our communities and industries</p>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
+            <div className="text-center p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
               <CheckCircle className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Integrity</h3>
-              <p className="text-gray-600">Building trust through honest, ethical, and transparent business practices</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Integrity</h3>
+              <p className="text-gray-700 font-medium">Building trust through honest, ethical, and transparent business practices</p>
             </div>
           </div>
         </div>
@@ -117,22 +117,22 @@ export default function Home() {
                 designed to nurture business leaders and entrepreneurs. Team Samriddhi represents 
                 13 exceptional professionals from diverse industries across India.
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  <span>13 Diverse Professionals</span>
+                  <CheckCircle className="h-6 w-6 text-green-600 mr-4 flex-shrink-0" />
+                  <span className="text-lg font-semibold text-gray-900">14 Diverse Professionals</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  <span>Multiple Industries & Locations</span>
+                  <CheckCircle className="h-6 w-6 text-green-600 mr-4 flex-shrink-0" />
+                  <span className="text-lg font-semibold text-gray-900">Multiple Industries & Locations</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  <span>Leadership Development Focus</span>
+                  <CheckCircle className="h-6 w-6 text-green-600 mr-4 flex-shrink-0" />
+                  <span className="text-lg font-semibold text-gray-900">Leadership Development Focus</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  <span>Community Impact Initiatives</span>
+                  <CheckCircle className="h-6 w-6 text-green-600 mr-4 flex-shrink-0" />
+                  <span className="text-lg font-semibold text-gray-900">Community Impact Initiatives</span>
                 </li>
               </ul>
             </div>
