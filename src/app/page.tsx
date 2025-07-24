@@ -454,7 +454,190 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Attend ABLE Section */}
+      {/* Reason 5 - Break the Trap Section */}
+      <section className="py-20 bg-gradient-to-br from-red-900 via-gray-900 to-black relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-black opacity-50" />
+          <motion.div
+            animate={{ 
+              scale: [1, 1.1, 1],
+              opacity: [0.1, 0.2, 0.1]
+            }}
+            transition={{ duration: 10, repeat: Infinity }}
+            className="absolute inset-0"
+            style={{
+              background: "radial-gradient(circle at center, rgba(239, 68, 68, 0.2) 0%, transparent 70%)",
+            }}
+          />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+              REASON No. 5 to Attend ABLE for Professionals: BREAK THE TRAP
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-white/5 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-2xl border border-red-500/20"
+          >
+            <motion.div
+              variants={fadeInUp}
+              className="text-center mb-10"
+            >
+              <p className="text-2xl md:text-3xl font-bold text-red-400 mb-4">
+                Because 92% of professionals are stuck in Repeat Mode.
+              </p>
+              <p className="text-xl text-gray-300">
+                And the worst part? They call it <span className="text-red-400 italic">growth</span>.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="grid md:grid-cols-3 gap-6 mb-10"
+            >
+              <motion.div variants={fadeInUp} className="text-center">
+                <div className="text-4xl mb-2">📅</div>
+                <p className="text-white font-semibold">Your calendar is full.</p>
+              </motion.div>
+              <motion.div variants={fadeInUp} className="text-center">
+                <div className="text-4xl mb-2">🧠</div>
+                <p className="text-white font-semibold">Your brain is fried.</p>
+              </motion.div>
+              <motion.div variants={fadeInUp} className="text-center">
+                <div className="text-4xl mb-2">💼</div>
+                <p className="text-white font-semibold">And your business? Still depends on you.</p>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              variants={fadeInUp}
+              className="bg-red-500/10 border border-red-500/30 rounded-2xl p-6 mb-8"
+            >
+              <p className="text-lg text-gray-200 mb-4">
+                You're showing up. You're selling. You're learning.
+              </p>
+              <p className="text-xl font-bold text-red-400">
+                But still...
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeInUp}
+              className="text-center mb-8"
+            >
+              <p className="text-xl text-gray-300 mb-4">
+                That's not freedom. That's burnout with branding.
+              </p>
+              <p className="text-2xl font-bold text-white">
+                Let's cut the fluff.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeInUp}
+              className="bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-2xl p-8 mb-8"
+            >
+              <p className="text-lg text-gray-200 mb-4">
+                If your income, client flow, or team performance depends on your daily hustle...
+              </p>
+              <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                >> You don't own a business—you own a self-created trap.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeInUp}
+              className="text-center"
+            >
+              <p className="text-xl text-white font-semibold mb-4">
+                At ABLE, we teach you how to break that trap—once and for all.
+              </p>
+              <div className="inline-flex items-center gap-4 bg-gradient-to-r from-red-500 to-orange-500 px-8 py-4 rounded-full">
+                <Zap className="h-6 w-6 text-white" />
+                <span className="text-white font-bold text-lg">Systems. Not Hustle.</span>
+                <Zap className="h-6 w-6 text-white" />
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Investment Details */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-8 text-center"
+          >
+            <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-8 py-4 rounded-2xl font-bold text-lg">
+              Investment: ₹ 25,000 + GST (For 4 Days, 3 Nights Stay)
+            </div>
+          </motion.div>
+
+          {/* Coaching Team */}
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="mt-12"
+          >
+            <h3 className="text-2xl font-bold text-white text-center mb-8">
+              YOUR COACHING TEAM: Professionals. Mentors. Game-changers.
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <motion.div
+                variants={fadeInUp}
+                className="bg-white/10 backdrop-blur-md rounded-2xl p-6"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-xl font-bold text-white">HS</span>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-white mb-2">Lead Coach: JFS Himadri Shailendra Sinha</h4>
+                    <p className="text-sm text-gray-300">
+                      A global branding specialist with a footprint in 72+ countries, known for transforming professionals into unforgettable personal brands.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={fadeInUp}
+                className="bg-white/10 backdrop-blur-md rounded-2xl p-6"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-xl font-bold text-white">NZ</span>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-white mb-2">Coach: PNP JFS Dr. Nilesh Zawar</h4>
+                    <p className="text-sm text-gray-300">
+                      Turned his expertise into a platform that serves thousands.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Attend ABLE Section (Reason 6) */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black opacity-40" />
