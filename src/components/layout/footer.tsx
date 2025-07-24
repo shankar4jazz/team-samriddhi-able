@@ -27,7 +27,7 @@ export default function Footer() {
             </p>
             <div className="mt-4 space-y-2 text-sm text-gray-400">
               <p><span className="text-gray-300 font-semibold">LED Coach:</span> JFS Himadri Shailendra Sinha - Global Branding Specialist</p>
-              <p><span className="text-gray-300 font-semibold">Team Coach:</span> JF Harish Kumar C</p>
+              <p><span className="text-gray-300 font-semibold">Team Coach:</span> JF Harishkumar C</p>
               <p><span className="text-gray-300 font-semibold">Date:</span> January 25-26, 2025</p>
               <p><span className="text-gray-300 font-semibold">Venue:</span> Bengaluru, Karnataka</p>
             </div>

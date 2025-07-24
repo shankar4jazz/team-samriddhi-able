@@ -194,7 +194,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="text-lg text-gray-600 mb-6 max-w-xl"
               >
-                Led by Coach <strong className="text-purple-600">Harish Kumar C</strong> (LIC of India) and Team Leader <strong className="text-purple-600">Vikas BC</strong>, 
+                Led by Coach <strong className="text-purple-600">Harishkumar C</strong> (LIC of India) and Team Leader <strong className="text-purple-600">Vikas BC</strong>, 
                 we are 14 professionals from diverse industries, united in our mission to 
                 excel, grow, and make a meaningful impact in our communities and businesses.
               </motion.p>
@@ -608,7 +608,7 @@ export default function Home() {
               Meet Team Samriddhi
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Led by Coach Harish Kumar C and Team Leader Vikas BC - 14 professionals united by the ABLE program
+              Led by Coach Harishkumar C and Team Leader Vikas BC - 14 professionals united by the ABLE program
             </p>
           </motion.div>
           

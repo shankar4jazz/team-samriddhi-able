@@ -19,14 +19,14 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     id: "harish-kumar-c",
-    name: "Harish Kumar C",
+    name: "Harishkumar C",
     title: "Senior Business Associate",
     company: "LIC of India",
     location: "India",
     photo: "/images/team/harish-kumar-c.jpg",
     role: "coach",
     mobile: "+91 94460 95165",
-    description: "Meet Harish Kumar C, our esteemed coach and Senior Business Associate at LIC of India. With his extensive experience in the insurance industry and leadership development, he guides Team Samriddhi through the ABLE program journey. His mentorship and expertise help shape future business leaders.",
+    description: "Meet Harishkumar C, our esteemed coach and Senior Business Associate at LIC of India. With his extensive experience in the insurance industry and leadership development, he guides Team Samriddhi through the ABLE program journey. His mentorship and expertise help shape future business leaders.",
     specialization: ["Insurance", "Business Development", "Leadership Coaching", "Team Mentoring"],
     achievements: ["Senior Business Associate - LIC of India", "ABLE Program Coach"],
     interests: ["Leadership development", "Team mentoring", "Business strategy"]
