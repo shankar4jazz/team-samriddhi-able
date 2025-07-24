@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowRight, CheckCircle, Star, Users, Zap, MapPin, Briefcase, Award, Crown, Phone, Sparkles, Target, Heart, Globe } from "lucide-react"
+import { ArrowRight, CheckCircle, Star, Users, Zap, MapPin, Briefcase, Award, Crown, Phone, Sparkles, Target, Heart, Globe, Menu, X } from "lucide-react"
 import Image from "next/image"
 import { teamMembers } from "@/data/team-members"
 
@@ -22,6 +22,7 @@ const staggerContainer = {
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { scrollY } = useScroll()
   const y1 = useTransform(scrollY, [0, 300], [0, 50])
   const y2 = useTransform(scrollY, [0, 300], [0, -50])
@@ -68,14 +69,6 @@ export default function Home() {
                 height={40}
                 className="h-10 w-auto"
               />
-              <div className="h-8 w-px bg-gray-300" />
-              <Image
-                src="/images/logo/jci-logo.png"
-                alt="JCI India"
-                width={40}
-                height={40}
-                className="h-10 w-auto"
-              />
               <div className="flex flex-col">
                 <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Team Samriddhi</div>
                 <span className="text-xs text-gray-600 font-medium">ABLE Program - JCI India</span>
@@ -94,14 +87,52 @@ export default function Home() {
                 </motion.a>
               ))}
             </nav>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-shadow"
+            <div className="hidden md:block">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-shadow"
+              >
+                Get Started
+              </motion.button>
+            </div>
+            
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              Get Started
-            </motion.button>
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
+          
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-gray-100 shadow-lg"
+            >
+              <div className="px-4 py-4 space-y-2">
+                {["Home", "About Samriddhi", "ABLE Program", "Our Team", "Contact"].map((item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase().replace(" ", "-")}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors"
+                  >
+                    {item}
+                  </a>
+                ))}
+                <div className="pt-2 mt-2 border-t border-gray-100">
+                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:shadow-lg transition-shadow">
+                    Get Started
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </div>
       </motion.header>
 

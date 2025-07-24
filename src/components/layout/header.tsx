@@ -29,14 +29,6 @@ export default function Header() {
               height={40}
               className="h-10 w-auto"
             />
-            <div className="h-8 w-px bg-gray-300" />
-            <Image
-              src="/images/logo/jci-logo.png"
-              alt="JCI India"
-              width={40}
-              height={40}
-              className="h-10 w-auto"
-            />
             <div className="flex flex-col">
               <Link href="/" className="text-xl font-bold text-gray-900 leading-tight">
                 Team Samriddhi
@@ -58,10 +50,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Sign In
-            </Button>
+          <div className="hidden md:block">
             <Button size="sm">
               Get Started
             </Button>
@@ -93,10 +82,7 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-gray-200 space-y-2">
-                <Button variant="outline" className="w-full">
-                  Sign In
-                </Button>
+              <div className="pt-4 border-t border-gray-200">
                 <Button className="w-full">
                   Get Started
                 </Button>
