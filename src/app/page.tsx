@@ -454,6 +454,196 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Attend ABLE Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-black opacity-40" />
+          <motion.div
+            animate={{ 
+              backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"],
+            }}
+            transition={{ duration: 20, repeat: Infinity }}
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: "url('/images/backgrounds/geometric-pattern.svg')",
+            }}
+          />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+              REASON No. 6 to Attend ABLE for Professionals
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-2xl"
+          >
+            <motion.h3
+              variants={fadeInUp}
+              className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 mb-6 text-center"
+            >
+              BECAUSE THIS IS THE ONLY PLACE YOU'LL EVER WRITE THE BOOK OF YOUR FUTURE—WITH THE PEN, THE PLAN, AND THE POWER IN YOUR HANDS.
+            </motion.h3>
+            
+            <motion.div
+              variants={fadeInUp}
+              className="text-center mb-8"
+            >
+              <p className="text-xl text-gray-200 italic mb-4">
+                Because for the First Time Ever — You Won't Just Take Notes.
+              </p>
+              <p className="text-2xl font-bold text-white">
+                You'll Write the Damn Book.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeInUp}
+              className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-6 mb-8"
+            >
+              <p className="text-lg text-white mb-4">
+                <span className="text-2xl font-bold text-yellow-400">Yes. A real BOOK.</span>
+              </p>
+              <p className="text-gray-200">
+                With your name on the cover. With your business, your growth, your life — designed, not defaulted.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <motion.div variants={fadeInUp} className="flex items-start">
+                <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-4 flex-shrink-0" />
+                <div>
+                  <p className="text-white font-semibold text-lg">
+                    ABLE for PROFESSIONALS isn't a seminar.
+                  </p>
+                  <p className="text-gray-300">
+                    This is a design studio for high performers.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div variants={fadeInUp} className="flex items-start">
+                <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-4 flex-shrink-0" />
+                <div>
+                  <p className="text-white">
+                    And you'll walk out with the most powerful business weapon you've ever owned —
+                  </p>
+                  <p className="text-xl font-bold text-yellow-400 mt-2">
+                    👉 Your Personal Success Playbook.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div variants={fadeInUp} className="flex items-start">
+                <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-4 flex-shrink-0" />
+                <p className="text-gray-300">
+                  Not some generic handout. When was the last time a program gave you more than inspiration?
+                  At ABLE, we give you a tangible legacy.
+                </p>
+              </motion.div>
+
+              <motion.div variants={fadeInUp} className="text-center mt-8">
+                <p className="text-xl text-white font-semibold">
+                  And it all begins with putting your name on the front cover.
+                </p>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
+          {/* Trainers Section */}
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="mt-12 grid md:grid-cols-3 gap-6"
+          >
+            <motion.div
+              variants={fadeInUp}
+              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center"
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-2xl font-bold text-white">HS</span>
+              </div>
+              <h4 className="text-xl font-bold text-white mb-2">JFS Himadri Shailendra Sinha</h4>
+              <p className="text-sm text-gray-300">
+                Trained professionals across Microsoft, Coca-Cola, Unilever, UPS, CNN from over 72 Countries
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeInUp}
+              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center"
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-2xl font-bold text-white">YC</span>
+              </div>
+              <h4 className="text-xl font-bold text-white mb-2">JFS CA Yogesh Chandak</h4>
+              <p className="text-sm text-gray-300">
+                Profit engineer and systems mentor across India
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeInUp}
+              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center"
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-blue-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-2xl font-bold text-white">HK</span>
+              </div>
+              <h4 className="text-xl font-bold text-white mb-2">Jc Harishkumar</h4>
+              <p className="text-sm text-gray-300">
+                LIC stalwart who's built careers for thousands in insurance & investments
+              </p>
+            </motion.div>
+          </motion.div>
+
+          {/* Event Details */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-8 text-center"
+          >
+            <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <MapPin className="h-8 w-8 text-white mx-auto mb-2" />
+                <h5 className="text-lg font-bold text-white mb-1">WHERE</h5>
+                <p className="text-white/90">Fairfield by Marriott, Belagavi</p>
+              </div>
+              <div>
+                <Award className="h-8 w-8 text-white mx-auto mb-2" />
+                <h5 className="text-lg font-bold text-white mb-1">WHEN</h5>
+                <p className="text-white/90">25–28 July 2025</p>
+              </div>
+              <div>
+                <Users className="h-8 w-8 text-white mx-auto mb-2" />
+                <h5 className="text-lg font-bold text-white mb-1">HOSTED BY</h5>
+                <p className="text-white/90">JCI Shimoga Malnad</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Enhanced About ABLE Program Section */}
       <section id="able-program" className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
