@@ -26,6 +26,7 @@ export const teamMembers: TeamMember[] = [
     photo: "/images/team/harish-kumar-c.jpg",
     role: "coach",
     mobile: "+91 94460 95165",
+    motto: "Aspire... Act... Achieve",
     description: "Meet Harishkumar C, our esteemed coach and Senior Business Associate at LIC of India. With his extensive experience in the insurance industry and leadership development, he guides Team Samriddhi through the ABLE program journey. His mentorship and expertise help shape future business leaders.",
     specialization: ["Insurance", "Business Development", "Leadership Coaching", "Team Mentoring"],
     achievements: ["Senior Business Associate - LIC of India", "ABLE Program Coach"],

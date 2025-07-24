@@ -12,7 +12,6 @@ export default function Header() {
   const navigation = [
     { name: "Home", href: "#home" },
     { name: "About Samriddhi", href: "#about-samriddhi" },
-    { name: "ABLE Program", href: "#about" },
     { name: "Our Team", href: "#team" },
   ]
 
