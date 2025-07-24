@@ -100,9 +100,9 @@ export default function Home() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="md:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? <X className="h-6 w-6 text-gray-700" /> : <Menu className="h-6 w-6 text-gray-700" />}
             </button>
           </div>
           
@@ -151,14 +151,14 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left Column - Content (appears second on mobile, first on desktop) */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center lg:text-left"
+              className="text-center lg:text-left order-2 lg:order-1"
             >
 
               <motion.h1
@@ -224,12 +224,12 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Right Column - Logo */}
+            {/* Right Column - Logo (appears first on mobile, second on desktop) */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative flex items-center justify-center"
+              className="relative flex items-center justify-center order-1 lg:order-2"
             >
               <motion.div
                 animate={{ 
@@ -248,7 +248,7 @@ export default function Home() {
                   alt="Team Samriddhi"
                   width={400}
                   height={400}
-                  className="w-full max-w-md h-auto relative z-10"
+                  className="w-full max-w-xs md:max-w-md h-auto relative z-10"
                   priority
                 />
               </motion.div>
