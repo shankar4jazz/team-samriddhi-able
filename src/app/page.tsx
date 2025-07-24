@@ -62,7 +62,7 @@ export default function Home() {
               className="flex items-center space-x-3"
             >
               <Image
-                src="/images/logo/samriddhi-logo.png"
+                src={`/images/logo/samriddhi-logo.png?v=${Date.now()}`}
                 alt="Team Samriddhi"
                 width={40}
                 height={40}
@@ -213,7 +213,7 @@ export default function Home() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-3xl opacity-20 scale-110" />
                 <Image
-                  src="/images/logo/samriddhi-logo.png"
+                  src={`/images/logo/samriddhi-logo.png?v=${Date.now()}`}
                   alt="Team Samriddhi"
                   width={400}
                   height={400}

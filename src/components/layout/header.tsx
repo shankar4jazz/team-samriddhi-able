@@ -23,7 +23,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
             <Image
-              src="/images/logo/samriddhi-logo.png"
+              src={`/images/logo/samriddhi-logo.png?v=${Date.now()}`}
               alt="Team Samriddhi"
               width={40}
               height={40}
