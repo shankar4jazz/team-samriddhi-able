@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowRight, CheckCircle, Star, Users, Zap, MapPin, Briefcase, Award, Crown, Phone, Sparkles, Target, Heart, Globe, Menu, X, MessageSquare } from "lucide-react"
+import { ArrowRight, CheckCircle, Star, Users, Zap, MapPin, Briefcase, Award, Crown, Phone, Sparkles, Target, Heart, Globe, MessageSquare } from "lucide-react"
 import Image from "next/image"
 import { teamMembers } from "@/data/team-members"
+import Header from "@/components/layout/header"
+import Footer from "@/components/layout/footer"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -22,7 +24,6 @@ const staggerContainer = {
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { scrollY } = useScroll()
   const y1 = useTransform(scrollY, [0, 300], [0, 50])
   const y2 = useTransform(scrollY, [0, 300], [0, -50])
@@ -49,92 +50,7 @@ export default function Home() {
         />
       </div>
 
-      {/* Enhanced Header */}
-      <motion.header 
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="bg-white/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-100"
-      >
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="flex justify-between items-center h-16">
-            <motion.div 
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center space-x-3"
-            >
-              <Image
-                src="/images/logo/samriddhi-logo.png"
-                alt="Team Samriddhi"
-                width={40}
-                height={40}
-                className="h-10 w-auto"
-              />
-              <div className="flex flex-col">
-                <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Team Samriddhi</div>
-                <span className="text-xs text-gray-600 font-medium">ABLE Program - JCI India</span>
-              </div>
-            </motion.div>
-            <nav className="hidden md:flex space-x-8">
-              {["Home", "About Samriddhi", "ABLE Program", "Our Team", "Contact"].map((item, index) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(" ", "-")}`}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="text-gray-600 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:bg-clip-text transition-all"
-                >
-                  {item}
-                </motion.a>
-              ))}
-            </nav>
-            <div className="hidden md:block">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-shadow"
-              >
-                Get Started
-              </motion.button>
-            </div>
-            
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
-            >
-              {isMobileMenuOpen ? <X className="h-6 w-6 text-gray-700" /> : <Menu className="h-6 w-6 text-gray-700" />}
-            </button>
-          </div>
-          
-          {/* Mobile Menu */}
-          {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-gray-100 shadow-lg"
-            >
-              <div className="px-4 py-4 space-y-2">
-                {["Home", "About Samriddhi", "ABLE Program", "Our Team", "Contact"].map((item) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase().replace(" ", "-")}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors"
-                  >
-                    {item}
-                  </a>
-                ))}
-                <div className="pt-2 mt-2 border-t border-gray-100">
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:shadow-lg transition-shadow">
-                    Get Started
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </div>
-      </motion.header>
+      <Header />
 
       {/* Enhanced Hero Section */}
       <section id="home" className="pt-16 md:pt-20 relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden">
@@ -619,114 +535,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Enhanced Footer */}
-      <footer className="bg-gray-900 text-white relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50" />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="col-span-1 md:col-span-2"
-            >
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Team Samriddhi
-              </h3>
-              <p className="text-gray-300 max-w-md mb-4">
-                Part of the ABLE Program by JCI India - Building leaders, fostering excellence, 
-                and creating positive impact in communities across India.
-              </p>
-              <div className="bg-gray-800 p-4 rounded-xl inline-block hover:bg-gray-700 transition-colors">
-                <p className="text-sm text-blue-400 font-semibold">JCI India ABLE Program</p>
-                <p className="text-xs text-gray-300">Advancing Business Leadership Excellence</p>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                {[
-                  { name: "About Samriddhi", href: "#about-samriddhi" },
-                  { name: "ABLE Program", href: "#able-program" },
-                  { name: "Our Team", href: "#our-team" },
-                  { name: "Connect", href: "#contact" }
-                ].map((link) => (
-                  <li key={link.name}>
-                    <a 
-                      href={link.href} 
-                      className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              <h4 className="text-lg font-semibold mb-4">Team Stats</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-2xl font-bold text-blue-400 mr-2">14</span> Team Members
-                </li>
-                <li className="flex items-center">
-                  <span className="text-2xl font-bold text-purple-400 mr-2">1</span> Coach + 13 Members
-                </li>
-                <li className="flex items-center">
-                  <Globe className="h-5 w-5 text-green-400 mr-2" />
-                  Pan-India Presence
-                </li>
-                <li className="flex items-center">
-                  <Award className="h-5 w-5 text-yellow-400 mr-2" />
-                  JCI India ABLE Program
-                </li>
-              </ul>
-            </motion.div>
-          </div>
-          
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300"
-          >
-            <p>&copy; 2024 Team Samriddhi - ABLE Program by JCI India. All rights reserved.</p>
-            <p className="text-sm mt-3 text-gray-400">
-              Designed and Developed by{" "}
-              <a 
-                href="https://eagleminds.net" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
-              >
-                Eagleminds Technologies Private Limited
-              </a>
-            </p>
-            <p className="text-xs mt-1 text-gray-500">
-              <a 
-                href="https://eagleminds.net" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-gray-400 transition-colors"
-              >
-                www.eagleminds.net
-              </a>
-            </p>
-          </motion.div>
-        </div>
-      </footer>
+      <Footer />
       
       {/* Add custom styles for blob animation */}
       <style jsx>{`
