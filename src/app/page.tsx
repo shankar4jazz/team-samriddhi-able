@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowRight, CheckCircle, Star, Users, Zap, MapPin, Briefcase, Award, Crown, Phone, Sparkles, Target, Heart, Globe, Menu, X } from "lucide-react"
+import { ArrowRight, CheckCircle, Star, Users, Zap, MapPin, Briefcase, Award, Crown, Phone, Sparkles, Target, Heart, Globe, Menu, X, MessageSquare } from "lucide-react"
 import Image from "next/image"
 import { teamMembers } from "@/data/team-members"
 
@@ -137,7 +137,7 @@ export default function Home() {
       </motion.header>
 
       {/* Enhanced Hero Section */}
-      <section id="home" className="pt-16 relative min-h-screen flex items-center overflow-hidden">
+      <section id="home" className="pt-20 md:pt-24 relative min-h-screen flex items-center overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 opacity-60" />
@@ -165,10 +165,9 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-5xl md:text-7xl font-bold mb-6 text-gray-900"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-gray-900 leading-tight whitespace-nowrap"
               >
-                <span className="bg-gradient-to-r from-gray-800 to-gray-900 bg-clip-text text-transparent">Team</span>{" "}
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Samriddhi</span>
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Team Samriddhi</span>
               </motion.h1>
 
               <motion.div
@@ -193,7 +192,7 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-lg text-gray-600 mb-8 max-w-xl"
+                className="text-lg text-gray-600 mb-6 max-w-xl"
               >
                 Led by Coach <strong className="text-purple-600">Harish Kumar C</strong> (LIC of India) and Team Leader <strong className="text-purple-600">Vikas BC</strong>, 
                 we are 14 professionals from diverse industries, united in our mission to 
@@ -206,21 +205,31 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               >
-                <motion.button
-                  whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
+                <motion.a
+                  href="#team"
+                  whileHover={{ scale: 1.05, boxShadow: "0 20px 30px -10px rgba(59, 130, 246, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
-                  className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg hover:from-blue-700 hover:to-purple-700 flex items-center justify-center"
+                  className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 flex items-center justify-center cursor-pointer shadow-lg transition-all duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   Meet Our Team 
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-                <motion.button
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+                </motion.a>
+                <motion.a
+                  href="#about"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full text-lg hover:bg-purple-50 transition-colors"
+                  className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 cursor-pointer inline-flex items-center justify-center"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   About ABLE Program
-                </motion.button>
+                </motion.a>
               </motion.div>
             </motion.div>
 
@@ -297,7 +306,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced What is Samriddhi Section */}
-      <section id="about-samriddhi" className="py-20 bg-white relative overflow-hidden">
+      <section id="about-samriddhi" className="py-12 md:py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-50 to-yellow-50 opacity-50" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -396,7 +405,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced ABLE Values Section */}
-      <section id="values" className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
+      <section id="values" className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
@@ -426,27 +435,27 @@ export default function Home() {
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
             {[
-              { icon: Award, title: "Excellence", desc: "Striving for the highest standards in everything we do", color: "from-blue-500 to-blue-600", delay: 0 },
-              { icon: Users, title: "Leadership", desc: "Developing skills to inspire positive change", color: "from-purple-500 to-purple-600", delay: 0.2 },
-              { icon: CheckCircle, title: "Integrity", desc: "Building trust through ethical practices", color: "from-green-500 to-green-600", delay: 0.4 }
+              { icon: Award, title: "Excellence", desc: "Striving for the highest standards in everything we do", color: "from-blue-500 to-blue-600", iconBg: "bg-blue-100", iconColor: "text-blue-600" },
+              { icon: Users, title: "Leadership", desc: "Developing skills to inspire positive change", color: "from-purple-500 to-purple-600", iconBg: "bg-purple-100", iconColor: "text-purple-600" },
+              { icon: CheckCircle, title: "Integrity", desc: "Building trust through ethical practices", color: "from-green-500 to-green-600", iconBg: "bg-green-100", iconColor: "text-green-600" }
             ].map((value, index) => (
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                whileHover={{ y: -10, scale: 1.02 }}
+                whileHover={{ y: -10 }}
                 className="relative group"
               >
-                <div className={`absolute inset-0 bg-gradient-to-r ${value.color} rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform`} />
-                <div className="relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
-                  <motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                    className="inline-block"
-                  >
-                    <value.icon className="h-14 w-14 text-gray-800 mx-auto mb-4" />
-                  </motion.div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-700">{value.desc}</p>
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white rounded-3xl" />
+                <div className={`absolute inset-0 bg-gradient-to-r ${value.color} opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-300`} />
+                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-gray-200">
+                  <div className={`${value.iconBg} w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <value.icon className={`h-10 w-10 ${value.iconColor}`} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">{value.desc}</p>
+                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${value.color} rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`} />
                 </div>
               </motion.div>
             ))}
@@ -457,7 +466,7 @@ export default function Home() {
 
 
       {/* Enhanced About ABLE Program Section */}
-      <section id="able-program" className="py-20 bg-white relative overflow-hidden">
+      <section id="about" className="py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/team-collaboration.jpg"
@@ -490,38 +499,30 @@ export default function Home() {
                 Team Samriddhi represents 14 exceptional professionals from diverse industries across India, 
                 united in their journey to become transformative leaders in their respective fields.
               </p>
-              <motion.ul
-                variants={staggerContainer}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                className="space-y-4"
-              >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                 {[
-                  "Business Strategy & Leadership Development",
-                  "Communication Skills & Personal Branding",
-                  "Networking & Professional Growth",
-                  "Community Impact & Social Responsibility"
+                  { title: "Business Strategy", desc: "Leadership Development", icon: Target, color: "from-blue-500 to-blue-600" },
+                  { title: "Communication", desc: "Personal Branding", icon: MessageSquare, color: "from-purple-500 to-purple-600" },
+                  { title: "Networking", desc: "Professional Growth", icon: Users, color: "from-green-500 to-green-600" },
+                  { title: "Community Impact", desc: "Social Responsibility", icon: Heart, color: "from-red-500 to-red-600" }
                 ].map((item, index) => (
-                  <motion.li
+                  <motion.div
                     key={index}
                     variants={fadeInUp}
-                    className="flex items-center group"
+                    whileHover={{ scale: 1.05 }}
+                    className="relative group"
                   >
-                    <div className="relative">
-                      <CheckCircle className="h-6 w-6 text-green-600 mr-4 flex-shrink-0" />
-                      <motion.div
-                        animate={{ scale: [1, 1.2, 1] }}
-                        transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
-                        className="absolute inset-0 h-6 w-6 bg-green-400 rounded-full opacity-30"
-                      />
+                    <div className={`absolute inset-0 bg-gradient-to-r ${item.color} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity duration-300`} />
+                    <div className="relative bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
+                      <div className={`bg-gradient-to-r ${item.color} w-12 h-12 rounded-xl flex items-center justify-center mb-4`}>
+                        <item.icon className="h-6 w-6 text-white" />
+                      </div>
+                      <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
+                      <p className="text-sm text-gray-600">{item.desc}</p>
                     </div>
-                    <span className="text-lg font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
-                      {item}
-                    </span>
-                  </motion.li>
+                  </motion.div>
                 ))}
-              </motion.ul>
+              </div>
             </motion.div>
             
             <motion.div
@@ -531,36 +532,49 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl blur-lg opacity-20" />
-              <div className="relative bg-white p-8 rounded-2xl shadow-2xl">
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-3 py-1 rounded-full">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl blur-2xl opacity-20 animate-pulse" />
+              <div className="relative bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-4 py-2 rounded-full font-semibold shadow-lg">
                   PROGRAM BENEFITS
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Why ABLE?</h3>
-                <div className="space-y-3 mb-4">
-                  <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <p className="text-gray-600 text-sm">Enhanced leadership capabilities and business strategy skills</p>
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <p className="text-gray-600 text-sm">Strong professional network across industries</p>
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <p className="text-gray-600 text-sm">Improved communication and personal branding</p>
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <p className="text-gray-600 text-sm">Greater confidence in navigating the business world</p>
-                  </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Join ABLE?</h3>
+                <div className="space-y-4 mb-6">
+                  {[
+                    { text: "Enhanced leadership capabilities and business strategy skills", icon: Target },
+                    { text: "Strong professional network across industries", icon: Users },
+                    { text: "Improved communication and personal branding", icon: MessageSquare },
+                    { text: "Greater confidence in navigating the business world", icon: Zap }
+                  ].map((benefit, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="flex items-start group"
+                    >
+                      <div className="bg-gradient-to-r from-green-100 to-green-200 p-2 rounded-lg mr-3 group-hover:scale-110 transition-transform">
+                        <benefit.icon className="h-4 w-4 text-green-700" />
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed">{benefit.text}</p>
+                    </motion.div>
+                  ))}
                 </div>
-                <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-xl">
-                  <div className="flex items-center justify-between mb-2">
-                    <p className="text-sm text-blue-800 font-semibold">JCI India ABLE (P)</p>
-                    <Target className="h-5 w-5 text-purple-600" />
+                <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 p-6 rounded-2xl border border-blue-100">
+                  <div className="flex items-center justify-between mb-3">
+                    <div>
+                      <p className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        JCI India ABLE (P)
+                      </p>
+                      <p className="text-xs text-gray-600 mt-1">Academy for Business Leadership Excellence</p>
+                    </div>
+                    <div className="bg-white p-3 rounded-xl shadow-md">
+                      <Target className="h-6 w-6 text-purple-600" />
+                    </div>
                   </div>
-                  <p className="text-xs text-gray-600">Academy for Business Leadership Excellence for Professionals</p>
+                  <div className="flex items-center gap-2 mt-4">
+                    <span className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">Professional Growth</span>
+                    <span className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">Leadership</span>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -569,7 +583,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced Team Members Section */}
-      <section id="our-team" className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      <section id="team" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         <motion.div
           animate={{ 
             background: [
@@ -610,25 +624,25 @@ export default function Home() {
                 key={member.id}
                 variants={fadeInUp}
                 whileHover={{ y: -10 }}
-                className="relative group"
+                className="relative group h-full"
               >
-                <div className={`absolute inset-0 rounded-2xl ${
+                <div className={`absolute inset-0 rounded-3xl ${
                   member.role === 'coach' 
                     ? 'bg-gradient-to-br from-yellow-400 to-orange-400' 
                     : member.role === 'team-leader' 
                     ? 'bg-gradient-to-br from-blue-400 to-purple-400'
-                    : 'bg-gradient-to-br from-gray-400 to-gray-600'
-                } opacity-10 group-hover:opacity-20 transition-opacity`} />
+                    : 'bg-gradient-to-br from-gray-300 to-gray-400'
+                } opacity-0 group-hover:opacity-10 transition-all duration-300 blur-xl`} />
                 
-                <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all">
+                <div className="relative bg-white rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-gray-200 h-full flex flex-col">
                   {/* Role Badge */}
                   {member.role === 'coach' && (
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full flex items-center shadow-lg"
+                      className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-4 py-2 rounded-full flex items-center shadow-lg font-semibold"
                     >
-                      <Crown className="h-3 w-3 mr-1" />
+                      <Crown className="h-4 w-4 mr-1" />
                       COACH
                     </motion.div>
                   )}
@@ -636,23 +650,23 @@ export default function Home() {
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      className="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-3 py-1 rounded-full flex items-center shadow-lg"
+                      className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-4 py-2 rounded-full flex items-center shadow-lg font-semibold"
                     >
-                      <Users className="h-3 w-3 mr-1" />
+                      <Users className="h-4 w-4 mr-1" />
                       LEADER
                     </motion.div>
                   )}
                   
-                  <div className="text-center mb-4">
+                  <div className="text-center mb-4 flex-1">
                     <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-3 overflow-hidden relative ${
+                      whileHover={{ scale: 1.05 }}
+                      className={`w-24 h-24 rounded-2xl flex items-center justify-center mx-auto mb-4 overflow-hidden relative ${
                         member.role === 'coach' 
-                          ? 'ring-4 ring-yellow-400 ring-offset-2' 
+                          ? 'ring-4 ring-yellow-400/30 ring-offset-4' 
                           : member.role === 'team-leader' 
-                          ? 'ring-4 ring-blue-400 ring-offset-2'
-                          : 'ring-2 ring-gray-300'
-                      }`}
+                          ? 'ring-4 ring-blue-400/30 ring-offset-4'
+                          : 'ring-2 ring-gray-200 ring-offset-2'
+                      } shadow-lg group-hover:shadow-xl transition-all duration-300`}
                     >
                       {member.photo ? (
                         <Image
@@ -660,10 +674,10 @@ export default function Home() {
                           alt={member.name}
                           width={80}
                           height={80}
-                          className="w-full h-full object-cover rounded-full"
+                          className="w-full h-full object-cover rounded-2xl"
                         />
                       ) : (
-                        <div className={`w-full h-full rounded-full flex items-center justify-center ${
+                        <div className={`w-full h-full rounded-2xl flex items-center justify-center ${
                           member.role === 'coach' 
                             ? 'bg-gradient-to-r from-yellow-500 to-orange-500' 
                             : member.role === 'team-leader' 
@@ -677,14 +691,14 @@ export default function Home() {
                       )}
                     </motion.div>
                     
-                    <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-                    <p className="text-sm bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-medium mb-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                    <p className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
                       {member.title}
                     </p>
-                    <p className="text-sm text-gray-600 mb-2">{member.company}</p>
+                    <p className="text-sm text-gray-600 font-medium mb-3">{member.company}</p>
                     
-                    <div className="flex items-center justify-center text-sm text-gray-500 mb-2">
-                      <MapPin className="h-4 w-4 mr-1" />
+                    <div className="flex items-center justify-center text-sm text-gray-500 mb-3">
+                      <MapPin className="h-4 w-4 mr-1 text-gray-400" />
                       {member.location}
                     </div>
                     
@@ -692,9 +706,9 @@ export default function Home() {
                       <motion.a
                         href={`tel:${member.mobile.replace(/\s/g, '')}`}
                         whileHover={{ scale: 1.05 }}
-                        className="flex items-center justify-center text-sm text-green-600 hover:text-green-700"
+                        className="inline-flex items-center justify-center text-sm bg-green-50 text-green-700 hover:bg-green-100 px-4 py-2 rounded-full font-medium transition-colors duration-200"
                       >
-                        <Phone className="h-4 w-4 mr-1" />
+                        <Phone className="h-4 w-4 mr-2" />
                         {member.mobile}
                       </motion.a>
                     )}
@@ -722,7 +736,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced Contact Section */}
-      <section id="contact" className="py-20 relative overflow-hidden">
+      <section id="contact" className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600" />
         <div className="absolute inset-0 bg-black opacity-10" />
         
@@ -744,11 +758,16 @@ export default function Home() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              Connect with Team Samriddhi
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Together We Rise, Together We Shine
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Part of the ABLE Program by JCI India. Ready to collaborate, learn, and grow together?
+            <p className="text-2xl text-yellow-300 font-semibold mb-4">
+              "समृद्धि की ओर एक साथ" - Towards Prosperity Together
+            </p>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+              14 passionate professionals, 1 unified vision. Through ABLE, we're not just building businesses - 
+              we're creating legacies, fostering innovation, and empowering communities. 
+              Join Team Samriddhi on our journey to excellence!
             </p>
             
             <motion.div
@@ -758,24 +777,34 @@ export default function Home() {
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <motion.button
+              <motion.a
+                href="#contact"
                 variants={fadeInUp}
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                className="group bg-white text-blue-600 px-8 py-4 rounded-full text-lg hover:bg-gray-100 flex items-center justify-center shadow-xl"
+                className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:from-yellow-300 hover:to-yellow-400 flex items-center justify-center shadow-xl cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
-                <Users className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                Connect with Us
-              </motion.button>
-              <motion.button
+                <Sparkles className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+                Join Our Success Story
+              </motion.a>
+              <motion.a
+                href="#team"
                 variants={fadeInUp}
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                className="group border-2 border-white text-white px-8 py-4 rounded-full text-lg hover:bg-white hover:text-blue-600 flex items-center justify-center transition-all"
+                className="group border-2 border-white text-white px-8 py-4 rounded-full text-lg hover:bg-white hover:text-blue-600 flex items-center justify-center transition-all cursor-pointer font-semibold"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 <Award className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                About ABLE Program
-              </motion.button>
+                Meet The Champions
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>
