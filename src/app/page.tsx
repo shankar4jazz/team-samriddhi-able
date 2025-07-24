@@ -63,7 +63,7 @@ export default function Home() {
               className="flex items-center space-x-3"
             >
               <Image
-                src={`/images/logo/samriddhi-logo.png?v=${Date.now()}`}
+                src="/images/logo/samriddhi-logo.png"
                 alt="Team Samriddhi"
                 width={40}
                 height={40}
@@ -137,7 +137,7 @@ export default function Home() {
       </motion.header>
 
       {/* Enhanced Hero Section */}
-      <section id="home" className="pt-20 md:pt-24 relative min-h-screen flex items-center overflow-hidden">
+      <section id="home" className="pt-16 md:pt-20 relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 opacity-60" />
@@ -151,8 +151,8 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
             {/* Left Column - Content (appears second on mobile, first on desktop) */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -165,7 +165,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-gray-900 leading-tight whitespace-nowrap"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 text-gray-900 leading-tight whitespace-nowrap"
               >
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Team Samriddhi</span>
               </motion.h1>
@@ -174,9 +174,9 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="mb-6"
+                className="mb-4"
               >
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 px-6 py-3 rounded-full mb-4">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 px-6 py-3 rounded-full mb-2">
                   <Sparkles className="h-5 w-5 text-yellow-500" />
                   <p className="text-lg md:text-xl font-semibold text-gray-800">
                     Proud participants of the <span className="text-blue-600">ABLE Program</span> by JCI India
@@ -192,7 +192,7 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-lg text-gray-600 mb-6 max-w-xl"
+                className="text-lg text-gray-600 mb-4 max-w-xl"
               >
                 Led by Coach <strong className="text-purple-600">Harishkumar C</strong> (LIC of India) and Team Leader <strong className="text-purple-600">Vikas BC</strong>, 
                 we are 14 professionals from diverse industries, united in our mission to 
@@ -253,7 +253,7 @@ export default function Home() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-3xl opacity-20 scale-110" />
                 <Image
-                  src={`/images/logo/samriddhi-logo.png?v=${Date.now()}`}
+                  src="/images/logo/samriddhi-logo.png"
                   alt="Team Samriddhi"
                   width={400}
                   height={400}
@@ -306,7 +306,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced What is Samriddhi Section */}
-      <section id="about-samriddhi" className="py-12 md:py-20 bg-white relative overflow-hidden">
+      <section id="about-samriddhi" className="py-8 md:py-12 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-50 to-yellow-50 opacity-50" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -601,25 +601,11 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <motion.a
-                href="#contact"
-                variants={fadeInUp}
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.95 }}
-                className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:from-yellow-300 hover:to-yellow-400 flex items-center justify-center shadow-xl cursor-pointer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                <Sparkles className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                Join Our Success Story
-              </motion.a>
-              <motion.a
                 href="#team"
                 variants={fadeInUp}
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                className="group border-2 border-white text-white px-8 py-4 rounded-full text-lg hover:bg-white hover:text-blue-600 flex items-center justify-center transition-all cursor-pointer font-semibold"
+                className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:from-yellow-300 hover:to-yellow-400 flex items-center justify-center shadow-xl cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' });

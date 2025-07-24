@@ -49,6 +49,23 @@ export const teamMembers: TeamMember[] = [
     interests: ["Learning new things", "Social service", "Team leadership"]
   },
   {
+    id: "gowri-shankar",
+    name: "Gowri Shankar V",
+    title: "Software Developer",
+    company: "Eagleminds Technologies",
+    location: "Tirupattur, Tamil Nadu",
+    photo: "/images/team/gowri-shankar.jpg",
+    role: "member",
+    mobile: "+91 96550 08990",
+    motto: "Trying until you succeed",
+    description: "Introducing Gowri Shankar V, Software Developer at Eagleminds Technologies, based in Tirupattur, Tamil Nadu. With over 250 businesses served, he believes in 'Trying until you succeed.' He brings positivity and consistent support to every client interaction, keeping learning as his superpower.",
+    languages: ["Tamil"],
+    family: "Wife and two daughters",
+    specialization: ["Software Development", "Client Support", "Technology Solutions"],
+    achievements: ["Over 250 businesses served"],
+    interests: ["Networking", "Tech trends", "Continuous learning"]
+  },
+  {
     id: "ramakrishna",
     name: "Alugupalli Venkata Ramakrishna",
     title: "Proprietor",
@@ -204,23 +221,6 @@ export const teamMembers: TeamMember[] = [
     specialization: ["Web Solutions", "ERP", "Conference Management", "Project Management"],
     achievements: ["6 successful client conferences since 2018"],
     interests: ["Music", "Reading books", "Learning"]
-  },
-  {
-    id: "gowri-shankar",
-    name: "Gowri Shankar V",
-    title: "Software Developer",
-    company: "Eagleminds Technologies",
-    location: "Tirupattur, Tamil Nadu",
-    photo: "/images/team/gowri-shankar.jpg",
-    role: "member",
-    mobile: "+91 96550 08990",
-    motto: "Trying until you succeed",
-    description: "Introducing Gowri Shankar V, Software Developer at Eagleminds Technologies, based in Tirupattur, Tamil Nadu. With over 250 businesses served, he believes in 'Trying until you succeed.' He brings positivity and consistent support to every client interaction, keeping learning as his superpower.",
-    languages: ["Tamil"],
-    family: "Wife and two daughters",
-    specialization: ["Software Development", "Client Support", "Technology Solutions"],
-    achievements: ["Over 250 businesses served"],
-    interests: ["Networking", "Tech trends", "Continuous learning"]
   },
   {
     id: "vinay-reddy",

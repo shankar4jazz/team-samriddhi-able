@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-4 mb-4">
               <Image
-                src={`/images/logo/samriddhi-logo.png?v=${Date.now()}`}
+                src="/images/logo/samriddhi-logo.png"
                 alt="Team Samriddhi"
                 width={60}
                 height={60}
