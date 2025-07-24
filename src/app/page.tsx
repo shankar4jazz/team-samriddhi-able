@@ -177,10 +177,10 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="mb-6"
               >
-                <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 px-6 py-3 rounded-full mb-4">
                   <Sparkles className="h-5 w-5 text-yellow-500" />
-                  <p className="text-xl md:text-2xl text-gray-700">
-                    Proud participants of the <strong className="text-blue-600">ABLE Program</strong> by JCI India
+                  <p className="text-lg md:text-xl font-semibold text-gray-800">
+                    Proud participants of the <span className="text-blue-600">ABLE Program</span> by JCI India
                   </p>
                   <Sparkles className="h-5 w-5 text-yellow-500" />
                 </div>
