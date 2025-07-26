@@ -375,7 +375,7 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-          
+
           <motion.div
             variants={staggerContainer}
             initial="initial"
@@ -495,6 +495,33 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
+          </motion.div>
+
+          {/* Team Video */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-20"
+          >
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
+                Watch Our Journey
+              </h3>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/hEM-H7ou6oI"
+                  title="Team Samriddhi - ABLE Program Journey"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-center mt-6 text-gray-600 text-lg">
+                Experience the spirit of Team Samriddhi through our ABLE Program journey
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
