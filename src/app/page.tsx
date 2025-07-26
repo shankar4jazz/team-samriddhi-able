@@ -350,6 +350,31 @@ export default function Home() {
               Led by Coach Harishkumar C and Team Leader Vikas BC - 14 professionals united by the ABLE program
             </p>
           </motion.div>
+
+          {/* Team Photo */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-20"
+          >
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-6xl mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 z-10" />
+              <Image
+                src="/images/team-photo.jpg"
+                alt="Team Samriddhi - ABLE Program Participants"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-cover"
+                priority
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8 z-20">
+                <h3 className="text-white text-2xl md:text-3xl font-bold mb-2">Team Samriddhi</h3>
+                <p className="text-white/90 text-lg">ABLE Program 2025 - United in Excellence</p>
+              </div>
+            </div>
+          </motion.div>
           
           <motion.div
             variants={staggerContainer}
