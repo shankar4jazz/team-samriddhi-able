@@ -59,8 +59,9 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300">
               <li className="text-white font-medium">Vikas BC</li>
               <li className="text-sm">Team Leader - Samriddhi</li>
-              <li className="text-sm">Chartered Accountant</li>
-              <li className="text-sm mt-2">Mobile: +91 95385 76022</li>
+              <li className="text-sm">Associate Financial Planner</li>
+              <li className="text-sm">Wealth Builders - Investment Service</li>
+              <li className="text-sm mt-2">Mobile: +91 81237 65014</li>
             </ul>
           </div>
         </div>

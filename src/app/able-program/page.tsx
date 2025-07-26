@@ -62,6 +62,19 @@ export default function AbleProgramPage() {
               <p className="text-lg text-gray-600 font-medium">
                 A flagship initiative by JCI India
               </p>
+              <div className="mt-4 space-y-2">
+                <p className="text-lg font-semibold text-gray-800">
+                  📅 25th - 28th July
+                </p>
+                <p className="text-lg text-gray-700">
+                  Hosted by <span className="font-semibold text-purple-600">JCI Shimoga Malnad</span>
+                </p>
+                <div className="mt-3 pt-3 border-t border-gray-200">
+                  <p className="text-sm text-gray-600">Head Coach: <span className="font-semibold">JFS Himdari Shailendra Sinha</span></p>
+                  <p className="text-sm text-gray-600">Team Coach: <span className="font-semibold">Harishkumar C</span></p>
+                  <p className="text-sm text-gray-600">Team Leader: <span className="font-semibold">Vikas BC</span></p>
+                </div>
+              </div>
             </motion.div>
 
             <motion.p
@@ -124,10 +137,34 @@ export default function AbleProgramPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { letter: "A", word: "Academy", desc: "Structured learning environment", color: "blue" },
-                  { letter: "B", word: "Business", desc: "Real-world application", color: "purple" },
-                  { letter: "L", word: "Leadership", desc: "Essential skills development", color: "pink" },
-                  { letter: "E", word: "Excellence", desc: "Pursuit of the highest standards", color: "orange" }
+                  { 
+                    letter: "A", 
+                    word: "Academy", 
+                    desc: "Structured learning environment", 
+                    bgClass: "bg-gradient-to-r from-blue-500 to-blue-600",
+                    displayWord: <><span className="text-blue-600">A</span>cademy</> 
+                  },
+                  { 
+                    letter: "B", 
+                    word: "Business", 
+                    desc: "Real-world application", 
+                    bgClass: "bg-gradient-to-r from-purple-500 to-purple-600",
+                    displayWord: <><span className="text-purple-600">B</span>usiness</> 
+                  },
+                  { 
+                    letter: "L", 
+                    word: "Leadership", 
+                    desc: "Essential skills development", 
+                    bgClass: "bg-gradient-to-r from-pink-500 to-pink-600",
+                    displayWord: <><span className="text-pink-600">L</span>eadership</> 
+                  },
+                  { 
+                    letter: "E", 
+                    word: "Excellence", 
+                    desc: "Pursuit of the highest standards", 
+                    bgClass: "bg-gradient-to-r from-orange-500 to-orange-600",
+                    displayWord: <><span className="text-orange-600">E</span>xcellence</> 
+                  }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -135,10 +172,10 @@ export default function AbleProgramPage() {
                     whileHover={{ scale: 1.05, y: -5 }}
                     className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all"
                   >
-                    <div className={`w-16 h-16 bg-gradient-to-r from-${item.color}-500 to-${item.color}-600 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                    <div className={`w-16 h-16 ${item.bgClass} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                       <span className="text-white font-bold text-2xl">{item.letter}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.word}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.displayWord || item.word}</h3>
                     <p className="text-gray-600">{item.desc}</p>
                   </motion.div>
                 ))}
@@ -170,37 +207,37 @@ export default function AbleProgramPage() {
                   icon: Target,
                   title: "Strategic Thinking",
                   description: "Develop critical thinking and strategic planning skills essential for business success.",
-                  color: "blue"
+                  bgClass: "bg-gradient-to-r from-blue-500 to-blue-600"
                 },
                 {
                   icon: Users,
                   title: "Team Leadership",
                   description: "Learn to lead diverse teams and foster collaborative work environments.",
-                  color: "purple"
+                  bgClass: "bg-gradient-to-r from-purple-500 to-purple-600"
                 },
                 {
                   icon: TrendingUp,
                   title: "Business Growth",
                   description: "Master techniques for driving business growth and operational excellence.",
-                  color: "green"
+                  bgClass: "bg-gradient-to-r from-green-500 to-green-600"
                 },
                 {
                   icon: Globe,
                   title: "Global Perspective",
                   description: "Gain insights into international business practices and global market trends.",
-                  color: "orange"
+                  bgClass: "bg-gradient-to-r from-orange-500 to-orange-600"
                 },
                 {
                   icon: Lightbulb,
                   title: "Innovation & Creativity",
                   description: "Foster innovative thinking and creative problem-solving approaches.",
-                  color: "yellow"
+                  bgClass: "bg-gradient-to-r from-yellow-500 to-yellow-600"
                 },
                 {
                   icon: Heart,
                   title: "Ethical Leadership",
                   description: "Build strong ethical foundations for responsible business leadership.",
-                  color: "red"
+                  bgClass: "bg-gradient-to-r from-red-500 to-red-600"
                 }
               ].map((feature, index) => (
                 <motion.div
@@ -209,7 +246,7 @@ export default function AbleProgramPage() {
                   whileHover={{ y: -10 }}
                   className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-r from-${feature.color}-500 to-${feature.color}-600 rounded-2xl flex items-center justify-center mb-6`}>
+                  <div className={`w-16 h-16 ${feature.bgClass} rounded-2xl flex items-center justify-center mb-6`}>
                     <feature.icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
@@ -263,8 +300,9 @@ export default function AbleProgramPage() {
                 <div className="space-y-4">
                   {[
                     { text: "14 dedicated professionals from diverse industries", icon: Users },
-                    { text: "Led by experienced Coach Harishkumar C from LIC of India", icon: Award },
-                    { text: "Guided by dynamic Team Leader Vikas BC", icon: Star },
+                    { text: "Led by Head Coach JFS Himdari Shailendra Sinha", icon: Star },
+                    { text: "Guided by Team Coach Harishkumar C from LIC of India", icon: Award },
+                    { text: "Supported by dynamic Team Leader Vikas BC", icon: Users },
                     { text: "Committed to mutual growth and community impact", icon: Heart },
                     { text: "Embodying the spirit of समृद्धि (Samriddhi) - Prosperity for All", icon: Globe }
                   ].map((item, index) => (
